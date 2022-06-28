@@ -10,7 +10,7 @@ ARG GID=1000
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update && apt -y upgrade && apt install -y language-pack-ja-base language-pack-ja \
-    locales tzdata man-db\
+    locales tzdata man-db nkf curl\
     nano wget vim git iproute2 python3 && \
     locale-gen ja_JP.UTF-8 && yes | unminimize
 ENV LANGUAGE=ja_JP.UTF-8

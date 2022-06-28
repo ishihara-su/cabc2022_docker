@@ -8,11 +8,11 @@
 
 ## イメージの作成
 
-```docker build . -t ishiharasusumu/ubuntu2004-cabc2022:v0.5```
+```docker build . -t ishiharasusumu/ubuntu2004-cabc2022:v0.6```
 
 ## コンテナの実行
 
-```docker run -it --name cabc2022 -h cabc_ubnt ishiharasusumu/ubuntu2004-cabc2022:v0.5```
+```docker run -it --name cabc2022 -h cabc_ubnt ishiharasusumu/ubuntu2004-cabc2022:v0.6```
 
 ## コンテナのアタッチ
 
@@ -20,11 +20,11 @@
 
 ## ルートでの作業
 
-```docker exec -it -u root -w / cabc2022 /bin/bach```
+```docker exec -it -u root -w / cabc2022 /bin/bash```
 
 ## メモ
 
-Dockerのデフォルトでは、Ctrl+P, Ctrl+Pがデタッチ用のキーになっている。これはbashのemacsライクキーバインドと重なって不便なので、インタラクティブ環境では、デタッチ用のキーを別に設けた方が良い。石原の環境ではCtrl+G, Gtrl+Gに設定を変更している。
+Dockerのデフォルトでは、Ctrl+P, Ctrl+Qがデタッチ用のキーになっている。これはbashのemacsライクのキーバインドと重なって不便なので、インタラクティブ環境では、デタッチ用のキーを別に設けた方が良い。石原の環境ではCtrl+G, Gtrl+Gに設定を変更している。
 
 具体的には、```~/.docker/config.json```に```"detachKeys": "ctrl-g,ctrl-g"```というエントリを加えている。
 
