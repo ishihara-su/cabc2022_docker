@@ -8,7 +8,7 @@
 
 ## イメージの作成
 
-```docker build . -t ishiharasusumu/bubuntu2004-cabc2022:v0.5```
+```docker build . -t ishiharasusumu/ubuntu2004-cabc2022:v0.5```
 
 ## コンテナの実行
 
